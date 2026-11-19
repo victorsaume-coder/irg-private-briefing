@@ -59,6 +59,17 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
+  --color-navy: var(--irg-navy);
+  --color-navy-deep: var(--irg-navy-deep);
+  --color-irg-gray: var(--irg-gray);
+  --color-irg-gray-soft: var(--irg-gray-soft);
+  --color-warm-white: var(--irg-warm-white);
+  --color-charcoal: var(--irg-charcoal);
+  --color-sand: var(--irg-sand);
+  --color-stone: var(--irg-stone);
 }
 
 :root {
@@ -95,6 +106,18 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  --font-body: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+
+  --irg-navy: oklch(0.27 0.058 256);
+  --irg-navy-deep: oklch(0.19 0.05 258);
+  --irg-gray: oklch(0.58 0.014 250);
+  --irg-gray-soft: oklch(0.72 0.012 250);
+  --irg-warm-white: oklch(0.975 0.008 80);
+  --irg-charcoal: oklch(0.21 0.006 256);
+  --irg-sand: oklch(0.9 0.018 75);
+  --irg-stone: oklch(0.88 0.01 80);
 }
 
 .dark {
@@ -140,5 +163,74 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility font-body {
+  font-family: var(--font-body);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility tracking-irg {
+  letter-spacing: 0.22em;
+}
+
+@utility hairline {
+  border-color: color-mix(in oklab, var(--irg-navy) 14%, transparent);
+}
+
+@keyframes irg-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes irg-kenburns {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes irg-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.irg-eyebrow {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.irg-rule {
+  height: 1px;
+  background: color-mix(in oklab, currentColor 18%, transparent);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--irg-navy) 22%, transparent);
 }

@@ -1,24 +1,60 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { AdvantageSection } from "@/components/irg/AdvantageSection";
+import { AccessSection } from "@/components/irg/AccessSection";
+import { ConversationSection } from "@/components/irg/ConversationSection";
+import { Footer } from "@/components/irg/Footer";
+import { Header } from "@/components/irg/Header";
+import { Hero } from "@/components/irg/Hero";
+import { IrgSection } from "@/components/irg/IrgSection";
+import { HERO_IMAGE } from "@/components/irg/assets";
+import { ObjectivesSection } from "@/components/irg/ObjectivesSection";
+import { OpportunitiesSection } from "@/components/irg/OpportunitiesSection";
+import { PeopleSection } from "@/components/irg/PeopleSection";
+import { WhyMiamiSection } from "@/components/irg/WhyMiamiSection";
+import { BuyWellSection } from "@/components/irg/BuyWellSection";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "IRG · A Private Look at Miami Pre-Construction" },
+      {
+        name: "description",
+        content:
+          "A private briefing on Miami pre-construction real estate from International Realty Group. Understand the opportunity, the access, and the relationships that shape it.",
+      },
+      { property: "og:title", content: "IRG · A Private Look at Miami Pre-Construction" },
+      {
+        property: "og:description",
+        content:
+          "A private briefing on Miami pre-construction real estate from International Realty Group.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: HERO_IMAGE },
+      { name: "twitter:image", content: HERO_IMAGE },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-vibe-blank-page-placeholder="REMOVE_THIS"
-        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHJ4PSIyNCIgZmlsbD0iI2YxZWZlNyIvPjxwYXRoIGQ9Ik0xMDAgNjR2NzJNNjQgMTAwaDcyIiBzdHJva2U9IiNjOWM0YjUiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+"
-        alt="Your app will live here!"
-      />
+    <div className="bg-warm-white font-body text-foreground">
+      <Header />
+      <main>
+        <Hero />
+        <AdvantageSection />
+        <WhyMiamiSection />
+        <ObjectivesSection />
+        <AccessSection />
+        <BuyWellSection />
+        <IrgSection />
+        <OpportunitiesSection />
+        <PeopleSection />
+        <ConversationSection />
+      </main>
+      <Footer />
     </div>
   );
 }
