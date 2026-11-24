@@ -52,8 +52,8 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-warm-white/85"
         >
-          Explore how pre-construction, strategic timing and developer relationships can create a
-          different way to own and invest in Miami.
+          Discover how early access, strategic timing and direct developer relationships can unlock
+          new opportunities to own and invest in Miami.
         </motion.p>
 
         <motion.div
