@@ -189,6 +189,10 @@
   border-color: color-mix(in oklab, var(--irg-navy) 14%, transparent);
 }
 
+@utility bg-hairline {
+  background-color: color-mix(in oklab, var(--irg-navy) 14%, transparent);
+}
+
 @keyframes irg-fade-up {
   from {
     opacity: 0;

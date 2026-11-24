@@ -18,6 +18,17 @@ export const LANDMARK_IMAGE =
 export const PEOPLE_IMAGE =
   "https://vibe.filesafe.space/1795082603459638104/assets/d685e895-c08e-48d0-9849-33d6993e1357.png";
 
+// Distinct architectural imagery for the curated opportunities showcase.
+export const OPPORTUNITY_IMAGES = [
+  "https://vibe.filesafe.space/1795082603459638104/assets/88ebbad9-76bb-4254-98d4-4446786b9cc2.png",
+  "https://vibe.filesafe.space/1795082603459638104/assets/fa83ba0a-be6c-4db6-89aa-5acb1610a380.png",
+  "https://vibe.filesafe.space/1795082603459638104/assets/e01fd631-621d-4612-8fb3-731dc965d45b.png",
+  "https://vibe.filesafe.space/1795082603459638104/assets/54114ba5-f481-4929-a674-cc9033b308f1.png",
+  "https://vibe.filesafe.space/1795082603459638104/assets/d6c45ad7-1d70-4852-b835-8e994ed2b3fc.png",
+  "https://vibe.filesafe.space/1795082603459638104/assets/b37c9fe2-e6aa-4000-9d61-9c16caaad164.png",
+  "https://vibe.filesafe.space/1795082603459638104/assets/5060dc4d-2646-4473-942f-3bc435305f95.png",
+];
+
 // Replace with the verified IRG WhatsApp number when ready.
 export const WHATSAPP_URL =
   "https://wa.me/13050000000?text=Hello%20Victor%20and%20Luis%20%E2%80%94%20I%20received%20the%20IRG%20Miami%20briefing%20and%20would%20like%20to%20talk.";

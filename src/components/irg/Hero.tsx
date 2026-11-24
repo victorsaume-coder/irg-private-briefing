@@ -21,7 +21,7 @@ export function Hero() {
           alt="Miami skyline and residential towers at blue hour"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-irg-navy-deep/85 via-irg-navy-deep/35 to-irg-navy-deep/55" />
+        <div className="absolute inset-0 bg-linear-to-t from-irg-navy-deep/90 via-irg-navy-deep/40 to-irg-navy-deep/60" />
       </motion.div>
 
       <motion.div

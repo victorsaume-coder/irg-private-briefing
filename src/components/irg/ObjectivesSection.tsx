@@ -15,14 +15,15 @@ export function ObjectivesSection() {
         <Stagger className="mt-16 grid gap-px bg-hairline sm:grid-cols-2 lg:grid-cols-3" gap={0.09}>
           {OBJECTIVES.map((o) => (
             <StaggerItem key={o.n}>
-              <div className="group h-full bg-warm-white p-9 transition-colors duration-500 hover:bg-sand/60">
-                <span className="font-display text-sm font-light text-irg-navy/40">{o.n}</span>
+              <div className="group relative h-full bg-warm-white p-9 transition-colors duration-500 hover:bg-sand/50">
+                <span className="font-display text-sm font-light text-irg-navy/35">{o.n}</span>
                 <h3 className="mt-5 text-xl font-medium tracking-tight text-irg-navy-deep">
                   {o.title}
                 </h3>
                 <p className="mt-4 text-[15px] font-light leading-relaxed text-charcoal/65">
                   {o.body}
                 </p>
+                <span className="absolute bottom-0 left-0 h-px w-0 bg-irg-navy/40 transition-all duration-500 group-hover:w-full" />
               </div>
             </StaggerItem>
           ))}

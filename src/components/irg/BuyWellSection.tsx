@@ -35,7 +35,7 @@ export function BuyWellSection() {
             <Stagger className="grid gap-px bg-hairline sm:grid-cols-2" gap={0.1}>
               {FRAMEWORK.map((f) => (
                 <StaggerItem key={f.k}>
-                  <div className="h-full bg-warm-white p-9">
+                  <div className="group h-full bg-warm-white p-9 transition-colors duration-500 hover:bg-sand/50">
                     <h3 className="font-display text-xl font-normal text-irg-navy-deep">{f.k}</h3>
                     <p className="mt-3 text-[15px] font-light leading-relaxed text-charcoal/65">
                       {f.v}

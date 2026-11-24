@@ -42,14 +42,21 @@ export function WhyMiamiSection() {
         </div>
 
         <Reveal className="mt-20">
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-[3px] border border-hairline bg-hairline lg:grid-cols-4">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="bg-warm-white px-6 py-10 text-center">
-                <p className="font-display text-3xl font-light text-irg-navy/25 lg:text-4xl">—</p>
-                <p className="mt-4 text-[11px] uppercase tracking-irg text-irg-gray">
-                  Verified figure
+          <div className="grid grid-cols-2 gap-px overflow-hidden border border-hairline bg-hairline lg:grid-cols-4">
+            {[
+              { label: "Population Trend", sub: "Net migration" },
+              { label: "Wealth Inflow", sub: "HNW residents" },
+              { label: "New Supply", sub: "Pipeline" },
+              { label: "Tax Position", sub: "No state income tax" },
+            ].map((s) => (
+              <div key={s.label} className="bg-warm-white px-6 py-10 text-center">
+                <p className="font-display text-3xl font-light tracking-tight text-irg-navy/30 lg:text-4xl">
+                  &mdash;
                 </p>
-                <p className="mt-1 text-[11px] text-irg-gray/60">To be inserted</p>
+                <p className="mt-4 text-[11px] uppercase tracking-irg text-irg-navy/70">
+                  {s.label}
+                </p>
+                <p className="mt-1 text-[11px] text-irg-gray">{s.sub}</p>
               </div>
             ))}
           </div>

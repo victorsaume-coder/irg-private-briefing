@@ -61,17 +61,25 @@ export function AccessSection() {
 
         <Reveal className="mt-20">
           <p className="irg-eyebrow text-warm-white/45">The Market Sequence</p>
-          <div className="mt-8 grid gap-4 lg:grid-cols-[1.6fr_0.12fr_1fr_0.12fr_1fr] lg:items-stretch">
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
             {ACCESS_TIERS.map((tier, i) => (
-              <div key={tier.stage} className="contents">
-                <div
-                  className={`flex flex-col justify-between rounded-[3px] border p-7 ${
-                    tier.dominant
-                      ? "border-warm-white/25 bg-warm-white text-irg-navy-deep"
-                      : "border-warm-white/12 bg-warm-white/[0.03] text-warm-white/80"
-                  }`}
-                >
-                  <div>
+              <div
+                key={tier.stage}
+                className={`flex flex-col justify-between rounded-[3px] border p-7 transition-colors duration-500 ${
+                  tier.dominant
+                    ? "border-warm-white/30 bg-warm-white text-irg-navy-deep"
+                    : "border-warm-white/12 bg-warm-white/[0.04] text-warm-white/80"
+                }`}
+              >
+                <div>
+                  <div className="flex items-center gap-3">
+                    <span
+                      className={`font-display text-sm font-light ${
+                        tier.dominant ? "text-irg-navy/50" : "text-warm-white/40"
+                      }`}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
                     <p
                       className={`irg-eyebrow ${
                         tier.dominant ? "text-irg-navy/70" : "text-warm-white/50"
@@ -79,29 +87,31 @@ export function AccessSection() {
                     >
                       {tier.stage}
                     </p>
-                    <p
-                      className={`mt-4 font-display text-xl font-light leading-snug ${
-                        tier.dominant ? "text-irg-navy-deep" : "text-warm-white"
-                      }`}
-                    >
-                      {tier.items}
-                    </p>
                   </div>
                   <p
-                    className={`mt-6 text-[13px] font-light leading-relaxed ${
-                      tier.dominant ? "text-irg-navy/65" : "text-warm-white/55"
+                    className={`mt-4 font-display text-xl font-light leading-snug ${
+                      tier.dominant ? "text-irg-navy-deep" : "text-warm-white"
                     }`}
                   >
-                    {tier.note}
+                    {tier.items}
                   </p>
                 </div>
-                {i < ACCESS_TIERS.length - 1 && (
-                  <div className="hidden items-center justify-center text-warm-white/30 lg:flex">
-                    <span className="text-2xl font-light">→</span>
-                  </div>
-                )}
+                <p
+                  className={`mt-6 text-[13px] font-light leading-relaxed ${
+                    tier.dominant ? "text-irg-navy/65" : "text-warm-white/55"
+                  }`}
+                >
+                  {tier.note}
+                </p>
               </div>
             ))}
+          </div>
+          <div className="mt-5 flex items-center gap-3 text-[11px] uppercase tracking-irg text-warm-white/40">
+            <span className="h-px w-8 bg-warm-white/30" />
+            <span>Earlier in the cycle</span>
+            <span className="h-px flex-1 bg-warm-white/15" />
+            <span>Later in the cycle</span>
+            <span className="h-px w-8 bg-warm-white/30" />
           </div>
         </Reveal>
 

@@ -12,7 +12,7 @@ export function PeopleSection() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid gap-px bg-hairline lg:grid-cols-12">
+        <div className="mt-16 grid gap-px overflow-hidden border border-hairline bg-hairline lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <div className="h-full bg-sand p-9 lg:p-12">
               <div className="overflow-hidden rounded-[3px] border border-hairline">
@@ -35,10 +35,13 @@ export function PeopleSection() {
           </Reveal>
 
           <div className="lg:col-span-7">
-            <Stagger className="h-full bg-sand" gap={0.12}>
+            <Stagger className="flex h-full flex-col bg-sand" gap={0.12}>
               <StaggerItem>
                 <div className="border-b border-hairline p-9 lg:p-12">
                   <p className="irg-eyebrow text-irg-navy/60">International Realty Group</p>
+                  <p className="mt-3 text-[14px] font-light leading-relaxed text-charcoal/60">
+                    A Miami-based boutique advisory firm. Complementary strengths, one relationship.
+                  </p>
                 </div>
               </StaggerItem>
               <StaggerItem>
@@ -56,7 +59,7 @@ export function PeopleSection() {
                 </div>
               </StaggerItem>
               <StaggerItem>
-                <div className="p-9 lg:p-12">
+                <div className="flex-1 p-9 lg:p-12">
                   <h3 className="font-display text-3xl font-normal text-irg-navy-deep">
                     Luis Victor Villalobos
                   </h3>

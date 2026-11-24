@@ -137,11 +137,39 @@ export const DEVELOPERS = [
 ];
 
 export const OPPORTUNITIES = [
-  { name: "Kempinski Residences", place: "Miami Design District" },
-  { name: "The Residences at Mandarin Oriental", place: "Brickell Key" },
-  { name: "Delano Residences & Hotel", place: "Miami Beach" },
-  { name: "Jean-Georges Miami Tropic", place: "Edgewater" },
-  { name: "Villa Miami", place: "Edgewater" },
-  { name: "619 Brickell by Nobu", place: "Brickell" },
-  { name: "One Twenty Brickell Residences", place: "Brickell" },
+  {
+    name: "Kempinski Residences",
+    place: "Miami Design District",
+    line: "Branded European hospitality meets the Design District's art-led identity.",
+  },
+  {
+    name: "The Residences at Mandarin Oriental",
+    place: "Brickell Key",
+    line: "Waterfront branded living anchored by a five-star hospitality operator.",
+  },
+  {
+    name: "Delano Residences & Hotel",
+    place: "Miami Beach",
+    line: "A reimagined landmark of Miami Beach's design heritage.",
+  },
+  {
+    name: "Jean-Georges Miami Tropic",
+    place: "Edgewater",
+    line: "Culinary-led branded residences on the Biscayne waterfront.",
+  },
+  {
+    name: "Villa Miami",
+    place: "Edgewater",
+    line: "Sculptural architecture on one of Edgewater's deepest waterfront parcels.",
+  },
+  {
+    name: "619 Brickell by Nobu",
+    place: "Brickell",
+    line: "A branded vertical community at the heart of Brickell's evolution.",
+  },
+  {
+    name: "One Twenty Brickell Residences",
+    place: "Brickell",
+    line: "A refined address within Brickell's next generation of residential towers.",
+  },
 ];
