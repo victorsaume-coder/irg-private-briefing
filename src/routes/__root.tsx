@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import briefingCss from "../briefing.css?url";
 import { reportVibeError } from "../lib/vibe-error-reporting";
 
 function NotFoundComponent() {
@@ -77,11 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AI Studio App" },
-      { name: "description", content: "AI Studio Generated Project" },
-      { name: "author", content: "AI Studio" },
-      { property: "og:title", content: "AI Studio App" },
-      { property: "og:description", content: "AI Studio Generated Project" },
+      { title: "IRG Private Briefing" },
+      {
+        name: "description",
+        content: "A private perspective on Miami real estate from International Realty Group.",
+      },
+      { name: "author", content: "International Realty Group" },
+      { property: "og:title", content: "IRG Private Briefing" },
+      { property: "og:description", content: "A private perspective on Miami real estate." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -94,12 +98,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap",
       },
       {
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "stylesheet", href: briefingCss },
+      { rel: "icon", type: "image/webp", href: "/images/logo.webp" },
     ],
   }),
   shellComponent: RootShell,
