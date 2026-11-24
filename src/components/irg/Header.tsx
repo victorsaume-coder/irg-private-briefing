@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-import { WhatsAppIcon } from "./WhatsAppIcon";
-import { LOGO_LIGHT, WHATSAPP_URL } from "./assets";
+import { LOGO_LIGHT } from "./assets";
 import { NAV } from "./content";
 
 export function Header() {
@@ -30,17 +29,6 @@ export function Header() {
             </a>
           ))}
         </nav>
-
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group inline-flex items-center gap-2 rounded-full border border-hairline px-4 py-2 text-[12px] font-medium tracking-wide text-charcoal/80 transition-colors hover:border-irg-navy hover:text-irg-navy"
-          aria-label="Open a WhatsApp conversation with IRG"
-        >
-          <WhatsAppIcon className="h-4 w-4" />
-          <span className="hidden sm:inline">WhatsApp</span>
-        </a>
       </div>
     </header>
   );
