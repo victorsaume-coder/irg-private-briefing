@@ -18,6 +18,6 @@ export const LANDMARK_IMAGE =
 export const PEOPLE_IMAGE =
   "https://vibe.filesafe.space/1795082603459638104/assets/d685e895-c08e-48d0-9849-33d6993e1357.png";
 
-// Public business WhatsApp verified on luisvictor.internationalrg.com, 2026-11-24.
+// Replace with the verified IRG WhatsApp number when ready.
 export const WHATSAPP_URL =
-  "https://wa.me/17864099212?text=Hello%20Victor%20and%20Luis%20%E2%80%94%20I%20received%20the%20IRG%20Miami%20briefing%20and%20would%20like%20to%20talk.";
+  "https://wa.me/13050000000?text=Hello%20Victor%20and%20Luis%20%E2%80%94%20I%20received%20the%20IRG%20Miami%20briefing%20and%20would%20like%20to%20talk.";

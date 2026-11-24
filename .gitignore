@@ -31,6 +31,3 @@ src/tailwind.config.vibe.json
 *.njsproj
 *.sln
 *.sw?
-
-# Local downloads retained only for image preparation
-public/images/originals/

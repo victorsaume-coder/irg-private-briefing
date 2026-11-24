@@ -1,32 +1,60 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PrivateBriefing } from "@/components/irg/PrivateBriefing";
+
+import { AdvantageSection } from "@/components/irg/AdvantageSection";
+import { AccessSection } from "@/components/irg/AccessSection";
+import { ConversationSection } from "@/components/irg/ConversationSection";
+import { Footer } from "@/components/irg/Footer";
+import { Header } from "@/components/irg/Header";
+import { Hero } from "@/components/irg/Hero";
+import { IrgSection } from "@/components/irg/IrgSection";
+import { HERO_IMAGE } from "@/components/irg/assets";
+import { ObjectivesSection } from "@/components/irg/ObjectivesSection";
+import { OpportunitiesSection } from "@/components/irg/OpportunitiesSection";
+import { PeopleSection } from "@/components/irg/PeopleSection";
+import { WhyMiamiSection } from "@/components/irg/WhyMiamiSection";
+import { BuyWellSection } from "@/components/irg/BuyWellSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "IRG Private Briefing | A Different Way Into Miami" },
+      { title: "IRG · A Private Look at Miami Pre-Construction" },
       {
         name: "description",
         content:
-          "A personal introduction to Miami pre-construction. Explore the advantage of timing, private access and a considered selection of residences with International Realty Group.",
+          "A private briefing on Miami pre-construction real estate from International Realty Group. Understand the opportunity, the access, and the relationships that shape it.",
       },
-      { property: "og:title", content: "IRG Private Briefing | A Different Way Into Miami" },
+      { property: "og:title", content: "IRG · A Private Look at Miami Pre-Construction" },
       {
         property: "og:description",
         content:
-          "The right residence. The right moment. A private perspective on Miami pre-construction with Victor Saume, Luis Victor Villalobos and International Realty Group.",
+          "A private briefing on Miami pre-construction real estate from International Realty Group.",
       },
       { property: "og:type", content: "website" },
-      {
-        property: "og:image",
-        content: "https://private-brief.irg-realestate.com/images/hero.webp",
-      },
       { name: "twitter:card", content: "summary_large_image" },
-      {
-        name: "twitter:image",
-        content: "https://private-brief.irg-realestate.com/images/hero.webp",
-      },
+      { property: "og:image", content: HERO_IMAGE },
+      { name: "twitter:image", content: HERO_IMAGE },
     ],
   }),
-  component: PrivateBriefing,
+  component: Index,
 });
+
+function Index() {
+  return (
+    <div className="bg-warm-white font-body text-foreground">
+      <Header />
+      <main>
+        <Hero />
+        <AdvantageSection />
+        <WhyMiamiSection />
+        <ObjectivesSection />
+        <AccessSection />
+        <BuyWellSection />
+        <IrgSection />
+        <OpportunitiesSection />
+        <PeopleSection />
+        <ConversationSection />
+      </main>
+      <Footer />
+    </div>
+  );
+}

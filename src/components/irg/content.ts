@@ -139,7 +139,7 @@ export const DEVELOPERS = [
 export const OPPORTUNITIES = [
   { name: "Kempinski Residences", place: "Miami Design District" },
   { name: "The Residences at Mandarin Oriental", place: "Brickell Key" },
-  { name: "Delano Residences & Hotel", place: "Downtown Miami" },
+  { name: "Delano Residences & Hotel", place: "Miami Beach" },
   { name: "Jean-Georges Miami Tropic", place: "Edgewater" },
   { name: "Villa Miami", place: "Edgewater" },
   { name: "619 Brickell by Nobu", place: "Brickell" },
