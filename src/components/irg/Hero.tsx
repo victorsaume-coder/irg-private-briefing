@@ -21,7 +21,7 @@ export function Hero() {
           alt="Miami skyline and residential towers at blue hour"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-irg-navy-deep/90 via-irg-navy-deep/40 to-irg-navy-deep/60" />
+        <div className="absolute inset-0 bg-linear-to-t from-irg-navy-deep/92 via-irg-navy-deep/45 to-irg-navy-deep/65" />
       </motion.div>
 
       <motion.div
@@ -34,7 +34,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="irg-eyebrow text-warm-white/70"
         >
-          IRG Private Briefing
+          Private Briefing
         </motion.p>
 
         <motion.h1
@@ -43,8 +43,7 @@ export function Hero() {
           transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="mt-7 max-w-4xl font-display text-[2.6rem] font-light leading-[1.04] text-warm-white sm:text-6xl lg:text-[4.4rem]"
         >
-          A Private Look at Miami{" "}
-          <span className="italic text-warm-white/90">Pre-Construction</span>
+          The Miami <span className="italic text-warm-white/90">Pre-Construction</span> Advantage.
         </motion.h1>
 
         <motion.p
@@ -53,29 +52,26 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-warm-white/85"
         >
-          Understand how buying before completion works, where the advantage can exist, and how IRG
-          gives selected clients access to some of Miami's most relevant new developments.
-        </motion.p>
-
-        <motion.p
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.75 }}
-          className="mt-10 max-w-xl border-l border-warm-white/25 pl-5 text-[15px] font-light leading-relaxed text-warm-white/65"
-        >
-          Pre-construction is not simply another way to buy real estate. Timing, access, capital
-          structure and project selection can fundamentally change the opportunity.
+          Explore how pre-construction, strategic timing and developer relationships can create a
+          different way to own and invest in Miami.
         </motion.p>
 
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.95 }}
-          className="mt-14 flex items-center gap-3 text-[12px] uppercase tracking-irg text-warm-white/55"
+          transition={{ duration: 1, delay: 0.75 }}
+          className="mt-12 flex items-center gap-3 text-[12px] uppercase tracking-irg text-warm-white/55"
         >
-          <span>Explore the briefing</span>
-          <span className="block h-px w-10 bg-warm-white/40" />
-          <span>↓</span>
+          <a
+            href="#advantage"
+            className="group flex items-center gap-3 transition-colors duration-300 hover:text-warm-white"
+          >
+            <span className="border-b border-warm-white/30 pb-1 transition-colors duration-300 group-hover:border-warm-white/70">
+              Explore the Opportunity
+            </span>
+            <span className="block h-px w-8 bg-warm-white/40 transition-all duration-300 group-hover:w-12 group-hover:bg-warm-white/70" />
+            <span className="transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
+          </a>
         </motion.div>
       </motion.div>
     </section>
