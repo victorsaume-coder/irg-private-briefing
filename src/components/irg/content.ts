@@ -38,46 +38,30 @@ export const MIAMI_REASONS = [
     title: "Business & Wealth Migration",
     stat: "+94%",
     body: "Miami's millionaire population nearly doubled between 2014 and 2024. Global firms such as Citadel are choosing Miami as their headquarters.",
-    source: "Henley & Partners, USA Wealth Report 2025",
-    sourceUrl:
-      "https://www.henleyglobal.com/publications/usa-wealth-report-2025/fastest-growing-wealth-hubs-usa",
-    note: "Miami wealth figures include Miami Beach and Coral Gables.",
-    citadelUrl: "https://www.citadel.com/who-we-are/office-locations/miami/",
   },
   {
     n: "02",
     title: "International Demand",
     stat: "52%",
     body: "International buyers accounted for 52% of reported sales across participating South Florida new-development and condo-conversion projects, with buyers from 73 countries.",
-    source: "MIAMI REALTORS®, New Construction Global Sales Report, Nov. 2025",
-    sourceUrl:
-      "https://www.miamirealtors.com/2025/11/11/new-international-report-global-buyer-share-increases-for-miami-new-construction-units-buyers-from-73-countries/",
-    note: "Covering a 22-month reporting period.",
   },
   {
     n: "03",
     title: "Infrastructure Investment",
     stat: "$9B",
     body: "Miami International Airport's modernization program reflects the scale of investment in the city's future connectivity.",
-    source: "Miami International Airport, Capital Improvement Program",
-    sourceUrl: "https://www.miami-airport.com/capital_improvement.asp",
   },
   {
     n: "04",
     title: "Florida State Income Tax",
     stat: "0%",
-    body: "No personal state income tax, an attractive environment for entrepreneurs, professionals and individuals considering Florida residency. Federal taxes, property taxes and other obligations may still apply.",
-    source: "Florida Department of Revenue",
-    sourceUrl: "https://floridarevenue.com/faq/Pages/FAQDetails.aspx?FAQID=1466",
+    body: "No personal state income tax, an attractive environment for entrepreneurs, professionals and individuals considering Florida residency.",
   },
   {
     n: "05",
     title: "Global Luxury Market",
     stat: "#2",
     body: "Miami ranks as the world's second-largest branded residences market, attracting prestigious international hospitality and luxury brands.",
-    source: "Knight Frank, Residence Report 2026",
-    sourceUrl:
-      "https://www.knightfrank.com/research/article/2026/9/residence-report-2026-us-luxury-property-boom",
   },
 ];
 
