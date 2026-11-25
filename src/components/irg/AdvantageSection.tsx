@@ -64,13 +64,6 @@ export function AdvantageSection() {
             </StaggerItem>
           ))}
         </Stagger>
-
-        <Reveal className="mt-10">
-          <p className="text-[12px] font-light tracking-wide text-irg-gray">
-            Pricing, deposit schedules and availability vary by development. Market values may rise
-            or fall.
-          </p>
-        </Reveal>
       </div>
     </section>
   );
