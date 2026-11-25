@@ -1,10 +1,12 @@
+import type * as React from "react";
+
 /**
  * Minimalist line icons for the five pre-construction objectives.
  * Single-weight stroke, no fill — consistent with the IRG editorial identity.
  * Each accepts the rendered size via `className` (width/height set on the svg).
  */
 
-type IconProps = { className?: string };
+export type IconProps = { className?: string };
 
 const base = {
   viewBox: "0 0 24 24",
@@ -72,4 +74,10 @@ export function FamilyIcon({ className }: IconProps) {
   );
 }
 
-export const OBJECTIVE_ICONS = [HomeIcon, GrowthIcon, KeyIcon, GlobeIcon, FamilyIcon];
+export const OBJECTIVE_ICONS: React.ComponentType<IconProps>[] = [
+  HomeIcon,
+  GrowthIcon,
+  KeyIcon,
+  GlobeIcon,
+  FamilyIcon,
+];

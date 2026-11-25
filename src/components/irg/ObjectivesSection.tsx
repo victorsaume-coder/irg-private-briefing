@@ -122,49 +122,61 @@ export function ObjectivesSection() {
                   aria-selected={isSelected}
                   aria-controls="shared-objective-panel"
                   onClick={() => setActive(isSelected ? null : i)}
-                  className={`group relative flex flex-col rounded-sm border px-5 py-5 text-left transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-warm-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-irg-navy-deep ${
+                  className={`group relative flex flex-col justify-between rounded-sm border px-5 py-5 text-left transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-warm-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-irg-navy-deep ${
                     isSelected
                       ? "border-warm-white/55 bg-irg-navy-card shadow-[0_10px_36px_-8px_rgba(0,0,0,0.55)]"
                       : "border-warm-white/12 bg-irg-navy-card/60 hover:-translate-y-1 hover:border-warm-white/35 hover:bg-irg-navy-card hover:shadow-[0_14px_36px_-10px_rgba(0,0,0,0.5)]"
                   }`}
                 >
-                  <span
-                    className={`transition-colors duration-300 ${
-                      isSelected
-                        ? "text-warm-white"
-                        : "text-warm-white/55 group-hover:text-warm-white/90"
-                    }`}
-                  >
-                    <Icon className="h-6 w-6" />
-                  </span>
-                  <span
-                    className={`mt-5 font-display text-[19px] font-light leading-snug tracking-tight transition-colors duration-300 ${
-                      isSelected ? "text-warm-white" : "text-warm-white group-hover:text-warm-white"
-                    }`}
-                  >
-                    {obj.title}
-                  </span>
-                  <span className="mt-2 flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.18em]">
+                  <div>
                     <span
                       className={`transition-colors duration-300 ${
                         isSelected
-                          ? "text-warm-white/85"
-                          : "text-warm-white/45 group-hover:text-warm-white/80"
+                          ? "text-warm-white"
+                          : "text-warm-white/55 group-hover:text-warm-white/90"
                       }`}
                     >
-                      Explore
+                      <Icon className="h-6 w-6" />
                     </span>
+                    <span className="mt-5 block font-display text-[19px] font-light leading-snug tracking-tight text-warm-white">
+                      {obj.title}
+                    </span>
+                  </div>
+
+                  {/* Subtle downward indicator — infers expanding downward on click */}
+                  <div className="mt-5 flex items-center justify-between pt-1">
+                    <span
+                      className={`h-px transition-all duration-300 ${
+                        isSelected
+                          ? "w-7 bg-warm-white/55"
+                          : "w-4 bg-warm-white/20 group-hover:w-7 group-hover:bg-warm-white/45"
+                      }`}
+                    />
                     <span
                       aria-hidden
-                      className={`text-[13px] leading-none transition-all duration-300 ${
+                      className={`flex h-5 w-5 items-center justify-center transition-all duration-300 ${
                         isSelected
-                          ? "translate-x-0.5 -translate-y-0.5 text-warm-white"
-                          : "text-warm-white/55 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-warm-white"
+                          ? "text-warm-white"
+                          : "text-warm-white/45 group-hover:translate-y-0.5 group-hover:text-warm-white"
                       }`}
                     >
-                      {isSelected ? "×" : "↗"}
+                      <svg
+                        width="13"
+                        height="13"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className={`transition-transform duration-300 ${
+                          isSelected ? "rotate-180" : ""
+                        }`}
+                      >
+                        <path d="M3 5.5l4 4 4-4" />
+                      </svg>
                     </span>
-                  </span>
+                  </div>
                 </button>
               );
             })}
@@ -266,13 +278,27 @@ export function ObjectivesSection() {
                     </span>
                     <span
                       aria-hidden
-                      className={`text-[14px] leading-none transition-all duration-300 ${
+                      className={`flex h-4 w-4 items-center justify-center transition-all duration-300 ${
                         isSelected
                           ? "text-warm-white"
                           : "text-warm-white/45 group-active:text-warm-white/85"
                       }`}
                     >
-                      ↗
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className={`transition-transform duration-300 ${
+                          isSelected ? "rotate-180" : ""
+                        }`}
+                      >
+                        <path d="M3 5.5l4 4 4-4" />
+                      </svg>
                     </span>
                   </span>
                   <span
