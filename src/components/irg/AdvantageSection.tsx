@@ -21,8 +21,8 @@ export function AdvantageSection() {
                 the building is completed, sometimes even before construction begins.
               </p>
               <p>
-                Buying at this early stage can offer a combination of significant advantages rarely
-                available when purchasing an existing property.
+                What makes it particularly attractive is the combination of significant advantages
+                rarely available when purchasing an existing property.
               </p>
             </div>
           </Reveal>
