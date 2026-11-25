@@ -9,61 +9,76 @@ export function WhyMiamiSection() {
           <div className="lg:col-span-5">
             <Reveal>
               <p className="irg-eyebrow text-irg-navy/70">Why Miami</p>
-              <h2 className="mt-7 font-display text-5xl font-light leading-[1.05] text-irg-navy-deep lg:text-6xl">
-                A city being reshaped by capital, business, infrastructure, global brands and
-                sustained residential demand.
+              <h2 className="mt-7 font-display text-4xl font-light leading-[1.08] text-irg-navy-deep lg:text-[3.2rem]">
+                A Global Destination for Business, Wealth and Real Estate.
               </h2>
+              <p className="mt-7 max-w-md text-[16px] font-light leading-relaxed text-charcoal/70 lg:text-[17px]">
+                Miami is attracting global capital, leading companies, international buyers and some
+                of the world's most prestigious luxury brands. The numbers tell the story.
+              </p>
             </Reveal>
           </div>
 
           <div className="lg:col-span-7">
-            <Stagger gap={0.11}>
+            <Stagger gap={0.1}>
               {MIAMI_REASONS.map((r) => (
                 <StaggerItem key={r.n}>
-                  <div className="border-b border-hairline py-8 first:pt-0">
-                    <div className="flex gap-6 lg:gap-8">
-                      <span className="font-display text-xl font-light text-irg-navy/50">
+                  <article className="group border-b border-hairline py-10 first:pt-0 last:border-b-0">
+                    <div className="flex items-start gap-6 lg:gap-10">
+                      <span className="font-display text-[13px] font-normal tracking-irg text-irg-gray">
                         {r.n}
                       </span>
-                      <div>
-                        <h3 className="text-lg font-medium tracking-tight text-irg-navy-deep">
-                          {r.title}
-                        </h3>
-                        <p className="mt-3 text-[15px] font-light leading-relaxed text-charcoal/65">
+
+                      <div className="flex-1">
+                        <div className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:gap-8">
+                          <span className="font-display text-5xl font-light leading-none tracking-tight text-irg-navy-deep lg:text-6xl">
+                            {r.stat}
+                          </span>
+                          <h3 className="text-lg font-medium tracking-tight text-irg-navy-deep">
+                            {r.title}
+                          </h3>
+                        </div>
+
+                        <p className="mt-5 max-w-xl text-[15px] font-light leading-relaxed text-charcoal/70">
                           {r.body}
                         </p>
+
+                        <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-irg-gray">
+                          <span className="uppercase tracking-irg text-irg-navy/45">Source</span>
+                          <a
+                            href={r.sourceUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline-offset-4 transition-colors duration-300 hover:text-irg-navy hover:underline"
+                          >
+                            {r.source}
+                          </a>
+                          {r.note ? (
+                            <span className="text-irg-gray/70">
+                              <span className="mx-1 text-irg-navy/25">·</span>
+                              {r.note}
+                            </span>
+                          ) : null}
+                          {r.citadelUrl ? (
+                            <a
+                              href={r.citadelUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-irg-gray/70 underline-offset-4 transition-colors duration-300 hover:text-irg-navy hover:underline"
+                            >
+                              <span className="mx-1 text-irg-navy/25">·</span>
+                              Citadel, Miami HQ
+                            </a>
+                          ) : null}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </article>
                 </StaggerItem>
               ))}
             </Stagger>
           </div>
         </div>
-
-        <Reveal className="mt-20">
-          <div className="grid grid-cols-2 gap-px overflow-hidden border border-hairline bg-hairline lg:grid-cols-4">
-            {[
-              { label: "Population Trend", sub: "Net migration" },
-              { label: "Wealth Inflow", sub: "HNW residents" },
-              { label: "New Supply", sub: "Pipeline" },
-              { label: "Tax Position", sub: "No state income tax" },
-            ].map((s) => (
-              <div key={s.label} className="bg-warm-white px-6 py-10 text-center">
-                <p className="font-display text-3xl font-light tracking-tight text-irg-navy/30 lg:text-4xl">
-                  &mdash;
-                </p>
-                <p className="mt-4 text-[11px] uppercase tracking-irg text-irg-navy/70">
-                  {s.label}
-                </p>
-                <p className="mt-1 text-[11px] text-irg-gray">{s.sub}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 text-[11px] text-irg-gray/70">
-            Verified market statistics to be added once confirmed.
-          </p>
-        </Reveal>
       </div>
     </section>
   );
