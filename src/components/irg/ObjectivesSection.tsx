@@ -93,9 +93,9 @@ export function ObjectivesSection() {
             </p>
           </Reveal>
 
-          <Reveal delay={0.06} className="mt-7 flex items-center gap-3">
-            <span className="irg-rule w-8 text-warm-white/35" />
-            <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-warm-white/60">
+          <Reveal delay={0.06} className="mt-8 flex items-center gap-3.5">
+            <span className="irg-rule w-10 text-warm-white/45" />
+            <span className="text-[12px] font-medium uppercase tracking-[0.2em] text-warm-white/80">
               Select an objective to discover the possibilities
             </span>
           </Reveal>
@@ -107,7 +107,7 @@ export function ObjectivesSection() {
           <div
             role="tablist"
             aria-label="Pre-construction objectives"
-            className="mt-12 grid grid-cols-5 gap-3.5"
+            className="mt-10 grid grid-cols-5 gap-3.5"
           >
             {OBJECTIVES.map((obj, i) => {
               const isSelected = active === i;
@@ -120,39 +120,39 @@ export function ObjectivesSection() {
                   aria-selected={isSelected}
                   aria-controls="shared-objective-panel"
                   onClick={() => setActive(isSelected ? null : i)}
-                  className={`group relative flex flex-col justify-between rounded-sm border p-5 text-left transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-warm-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-irg-navy-deep lg:min-h-[128px] ${
+                  className={`group relative flex flex-col justify-between rounded-sm border px-4 py-4 text-left transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-warm-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-irg-navy-deep lg:min-h-[112px] ${
                     isSelected
-                      ? "border-warm-white/50 bg-warm-white/[0.08] shadow-[0_4px_24px_-4px_rgba(0,0,0,0.35)]"
-                      : "border-warm-white/12 bg-warm-white/[0.025] hover:border-warm-white/30 hover:bg-warm-white/[0.05]"
+                      ? "border-warm-white/60 bg-warm-white/[0.1] shadow-[0_6px_28px_-6px_rgba(0,0,0,0.45)]"
+                      : "border-warm-white/15 bg-warm-white/[0.025] hover:border-warm-white/40 hover:bg-warm-white/[0.06]"
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <span
-                      className={`font-display text-xs font-light tracking-wider transition-colors duration-300 ${
+                      className={`font-display text-[11px] font-light tracking-[0.12em] transition-colors duration-300 ${
                         isSelected
                           ? "text-warm-white"
-                          : "text-warm-white/40 group-hover:text-warm-white/65"
+                          : "text-warm-white/45 group-hover:text-warm-white/70"
                       }`}
                     >
                       {obj.n}
                     </span>
                     <span
                       aria-hidden
-                      className={`text-xs transition-transform duration-300 ${
+                      className={`text-[13px] leading-none transition-all duration-300 ${
                         isSelected
                           ? "translate-x-0.5 -translate-y-0.5 text-warm-white"
-                          : "text-warm-white/35 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-warm-white/70"
+                          : "text-warm-white/40 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-warm-white/85"
                       }`}
                     >
                       {isSelected ? "×" : "↗"}
                     </span>
                   </div>
-                  <div className="mt-5">
+                  <div className="mt-3">
                     <span
-                      className={`font-display text-[16.5px] font-light leading-snug tracking-tight transition-colors duration-300 ${
+                      className={`font-display text-[16px] font-light leading-snug tracking-tight transition-colors duration-300 ${
                         isSelected
                           ? "text-warm-white"
-                          : "text-warm-white/80 group-hover:text-warm-white"
+                          : "text-warm-white/85 group-hover:text-warm-white"
                       }`}
                     >
                       {obj.title}
@@ -180,7 +180,7 @@ export function ObjectivesSection() {
                 animate={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
                 exit={reduce ? { opacity: 0 } : { opacity: 0, y: -8 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-10 overflow-hidden rounded-sm border border-warm-white/15 bg-warm-white/[0.04] p-11 backdrop-blur-sm"
+                className="mt-8 overflow-hidden rounded-sm border border-warm-white/15 bg-warm-white/[0.04] p-10 backdrop-blur-sm"
               >
                 <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.3fr_minmax(0,380px)]">
                   <div className="max-w-xl">
@@ -229,7 +229,7 @@ export function ObjectivesSection() {
 
         {/* ───────────────────────── MOBILE ───────────────────────── */}
         {/* Compact 2-col cards (5th spans full width); opens a bottom sheet. */}
-        <div className="mt-10 lg:hidden">
+        <div className="mt-8 lg:hidden">
           <div className="grid grid-cols-2 gap-2.5">
             {OBJECTIVES.map((obj, i) => {
               const isSelected = active === i;
@@ -244,36 +244,36 @@ export function ObjectivesSection() {
                   aria-haspopup="dialog"
                   aria-expanded={isSelected}
                   onClick={() => setActive(isSelected ? null : i)}
-                  className={`group relative flex flex-col justify-between overflow-hidden rounded-sm border px-4 pb-4 pt-3.5 text-left transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-warm-white/70 ${
+                  className={`group relative flex flex-col justify-between overflow-hidden rounded-sm border px-4 pb-3.5 pt-3 text-left transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-warm-white/70 ${
                     isFifth ? "col-span-2" : ""
                   } ${
                     isSelected
-                      ? "border-warm-white/45 bg-warm-white/[0.09]"
-                      : "border-warm-white/12 bg-warm-white/[0.03] active:bg-warm-white/[0.07]"
+                      ? "border-warm-white/55 bg-warm-white/[0.1]"
+                      : "border-warm-white/15 bg-warm-white/[0.03] active:bg-warm-white/[0.08]"
                   }`}
-                  style={{ minHeight: "104px" }}
+                  style={{ minHeight: "96px" }}
                 >
                   <span
-                    className={`font-display text-[11px] font-light tracking-wider transition-colors duration-300 ${
-                      isSelected ? "text-warm-white" : "text-warm-white/40"
+                    className={`font-display text-[10.5px] font-light tracking-[0.12em] transition-colors duration-300 ${
+                      isSelected ? "text-warm-white" : "text-warm-white/45"
                     }`}
                   >
                     {obj.n}
                   </span>
-                  <span className="mt-6 flex items-end justify-between gap-3">
+                  <span className="mt-4 flex items-end justify-between gap-3">
                     <span
-                      className={`font-display text-[17px] font-light leading-tight tracking-tight transition-colors duration-300 ${
-                        isSelected ? "text-warm-white" : "text-warm-white/85"
+                      className={`font-display text-[16.5px] font-light leading-tight tracking-tight transition-colors duration-300 ${
+                        isSelected ? "text-warm-white" : "text-warm-white/90"
                       }`}
                     >
                       {obj.title}
                     </span>
                     <span
                       aria-hidden
-                      className={`text-sm leading-none transition-all duration-300 ${
+                      className={`text-[15px] leading-none transition-all duration-300 ${
                         isSelected
                           ? "text-warm-white"
-                          : "text-warm-white/30 group-active:text-warm-white/70"
+                          : "text-warm-white/40 group-active:text-warm-white/80"
                       }`}
                     >
                       ↗
@@ -368,10 +368,10 @@ export function ObjectivesSection() {
                     exit={reduce ? { opacity: 0 } : { opacity: 0, y: -6 }}
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    <h3 className="font-display text-[26px] font-light leading-[1.2] text-irg-navy">
+                    <h3 className="font-display text-[27px] font-light leading-[1.18] text-irg-navy">
                       {currentObj.headline}
                     </h3>
-                    <p className="mt-3 text-[15px] font-light leading-relaxed text-irg-navy/70">
+                    <p className="mt-3 text-[15px] font-light leading-relaxed text-irg-navy/75">
                       {currentObj.body}
                     </p>
 
@@ -389,7 +389,7 @@ export function ObjectivesSection() {
                       </ul>
                     </div>
 
-                    <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-irg-navy/10">
+                    <div className="relative mt-5 aspect-[16/9] w-full overflow-hidden rounded-lg border border-irg-navy/10">
                       <img
                         src={currentObj.image}
                         alt={currentObj.title}
