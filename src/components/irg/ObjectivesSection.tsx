@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "./Reveal";
 import { OBJECTIVES } from "./content";
+import { HomeIcon, OBJECTIVE_ICONS } from "./ObjectiveIcons";
 
 /** Matches the Tailwind `lg` breakpoint (1024px): below it, the mobile
  *  bottom-sheet experience is active. */
@@ -111,6 +112,7 @@ export function ObjectivesSection() {
           >
             {OBJECTIVES.map((obj, i) => {
               const isSelected = active === i;
+              const Icon = OBJECTIVE_ICONS[i] ?? HomeIcon;
               return (
                 <button
                   key={obj.n}
@@ -120,50 +122,49 @@ export function ObjectivesSection() {
                   aria-selected={isSelected}
                   aria-controls="shared-objective-panel"
                   onClick={() => setActive(isSelected ? null : i)}
-                  className={`group relative flex flex-col justify-between rounded-sm border px-4 py-4 text-left transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-warm-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-irg-navy-deep lg:min-h-[112px] ${
+                  className={`group relative flex flex-col rounded-sm border px-5 py-5 text-left transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-warm-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-irg-navy-deep ${
                     isSelected
-                      ? "border-warm-white/60 bg-warm-white/[0.1] shadow-[0_6px_28px_-6px_rgba(0,0,0,0.45)]"
-                      : "border-warm-white/15 bg-warm-white/[0.025] hover:border-warm-white/40 hover:bg-warm-white/[0.06]"
+                      ? "border-warm-white/55 bg-irg-navy-card shadow-[0_10px_36px_-8px_rgba(0,0,0,0.55)]"
+                      : "border-warm-white/12 bg-irg-navy-card/60 hover:-translate-y-1 hover:border-warm-white/35 hover:bg-irg-navy-card hover:shadow-[0_14px_36px_-10px_rgba(0,0,0,0.5)]"
                   }`}
                 >
-                  <div className="flex items-center justify-between">
+                  <span
+                    className={`transition-colors duration-300 ${
+                      isSelected
+                        ? "text-warm-white"
+                        : "text-warm-white/55 group-hover:text-warm-white/90"
+                    }`}
+                  >
+                    <Icon className="h-6 w-6" />
+                  </span>
+                  <span
+                    className={`mt-5 font-display text-[19px] font-light leading-snug tracking-tight transition-colors duration-300 ${
+                      isSelected ? "text-warm-white" : "text-warm-white group-hover:text-warm-white"
+                    }`}
+                  >
+                    {obj.title}
+                  </span>
+                  <span className="mt-2 flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.18em]">
                     <span
-                      className={`font-display text-[11px] font-light tracking-[0.12em] transition-colors duration-300 ${
+                      className={`transition-colors duration-300 ${
                         isSelected
-                          ? "text-warm-white"
-                          : "text-warm-white/45 group-hover:text-warm-white/70"
+                          ? "text-warm-white/85"
+                          : "text-warm-white/45 group-hover:text-warm-white/80"
                       }`}
                     >
-                      {obj.n}
+                      Explore
                     </span>
                     <span
                       aria-hidden
                       className={`text-[13px] leading-none transition-all duration-300 ${
                         isSelected
                           ? "translate-x-0.5 -translate-y-0.5 text-warm-white"
-                          : "text-warm-white/40 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-warm-white/85"
+                          : "text-warm-white/55 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-warm-white"
                       }`}
                     >
                       {isSelected ? "×" : "↗"}
                     </span>
-                  </div>
-                  <div className="mt-3">
-                    <span
-                      className={`font-display text-[16px] font-light leading-snug tracking-tight transition-colors duration-300 ${
-                        isSelected
-                          ? "text-warm-white"
-                          : "text-warm-white/85 group-hover:text-warm-white"
-                      }`}
-                    >
-                      {obj.title}
-                    </span>
-                  </div>
-                  <span
-                    aria-hidden
-                    className={`absolute -bottom-px left-0 right-0 h-[2px] transition-all duration-300 ${
-                      isSelected ? "bg-warm-white opacity-90" : "bg-transparent opacity-0"
-                    }`}
-                  />
+                  </span>
                 </button>
               );
             })}
@@ -234,6 +235,7 @@ export function ObjectivesSection() {
             {OBJECTIVES.map((obj, i) => {
               const isSelected = active === i;
               const isFifth = i === last;
+              const Icon = OBJECTIVE_ICONS[i] ?? HomeIcon;
               return (
                 <button
                   key={obj.n}
@@ -244,40 +246,41 @@ export function ObjectivesSection() {
                   aria-haspopup="dialog"
                   aria-expanded={isSelected}
                   onClick={() => setActive(isSelected ? null : i)}
-                  className={`group relative flex flex-col justify-between overflow-hidden rounded-sm border px-4 pb-3.5 pt-3 text-left transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-warm-white/70 ${
+                  className={`group relative flex flex-col overflow-hidden rounded-sm border px-4 pb-4 pt-4 text-left transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-warm-white/70 ${
                     isFifth ? "col-span-2" : ""
                   } ${
                     isSelected
-                      ? "border-warm-white/55 bg-warm-white/[0.1]"
-                      : "border-warm-white/15 bg-warm-white/[0.03] active:bg-warm-white/[0.08]"
+                      ? "border-warm-white/55 bg-irg-navy-card"
+                      : "border-warm-white/12 bg-irg-navy-card/60 active:bg-irg-navy-card"
                   }`}
-                  style={{ minHeight: "96px" }}
                 >
-                  <span
-                    className={`font-display text-[10.5px] font-light tracking-[0.12em] transition-colors duration-300 ${
-                      isSelected ? "text-warm-white" : "text-warm-white/45"
-                    }`}
-                  >
-                    {obj.n}
-                  </span>
-                  <span className="mt-4 flex items-end justify-between gap-3">
+                  <span className="flex items-center justify-between">
                     <span
-                      className={`font-display text-[16.5px] font-light leading-tight tracking-tight transition-colors duration-300 ${
-                        isSelected ? "text-warm-white" : "text-warm-white/90"
+                      className={`transition-colors duration-300 ${
+                        isSelected
+                          ? "text-warm-white"
+                          : "text-warm-white/55 group-active:text-warm-white/90"
                       }`}
                     >
-                      {obj.title}
+                      <Icon className="h-5 w-5" />
                     </span>
                     <span
                       aria-hidden
-                      className={`text-[15px] leading-none transition-all duration-300 ${
+                      className={`text-[14px] leading-none transition-all duration-300 ${
                         isSelected
                           ? "text-warm-white"
-                          : "text-warm-white/40 group-active:text-warm-white/80"
+                          : "text-warm-white/45 group-active:text-warm-white/85"
                       }`}
                     >
                       ↗
                     </span>
+                  </span>
+                  <span
+                    className={`mt-4 font-display text-[17.5px] font-light leading-tight tracking-tight transition-colors duration-300 ${
+                      isSelected ? "text-warm-white" : "text-warm-white"
+                    }`}
+                  >
+                    {obj.title}
                   </span>
                 </button>
               );

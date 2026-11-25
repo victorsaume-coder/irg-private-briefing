@@ -66,6 +66,7 @@
   --color-navy-deep: var(--irg-navy-deep);
   --color-irg-navy: var(--irg-navy);
   --color-irg-navy-deep: var(--irg-navy-deep);
+  --color-irg-navy-card: var(--irg-navy-card);
   --color-irg-gray: var(--irg-gray);
   --color-irg-gray-soft: var(--irg-gray-soft);
   --color-warm-white: var(--irg-warm-white);
@@ -114,6 +115,7 @@
 
   --irg-navy: #192a3e;
   --irg-navy-deep: #0f1c2b;
+  --irg-navy-card: #1d3147;
   --irg-gray: #6b7785;
   --irg-gray-soft: #9aa3af;
   --irg-warm-white: #faf9f6;
