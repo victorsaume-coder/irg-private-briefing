@@ -27,7 +27,7 @@ export const ADVANTAGES = [
   {
     n: "04",
     tag: "Growth",
-    title: "Potential Appreciation",
+    title: "Appreciation",
     body: "Benefit from the potential increase in your residence's market value between the time you sign your purchase contract and the building's completion.",
   },
 ];
