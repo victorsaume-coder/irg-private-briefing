@@ -5,22 +5,30 @@ export const NAV = [
   { label: "IRG", href: "#irg" },
 ];
 
-export const COMPARISONS = [
+export const ADVANTAGES = [
   {
-    conv: "Buy at today's established market value.",
-    pre: "Enter earlier in the project's pricing cycle.",
+    n: "01",
+    tag: "Pricing",
+    title: "Early Pricing",
+    body: "Secure initial developer pricing before potential price increases as the project progresses.",
   },
   {
-    conv: "Deploy most of the capital or financing around acquisition.",
-    pre: "Deploy capital progressively through scheduled deposits.",
+    n: "02",
+    tag: "Capital",
+    title: "Progressive Payments",
+    body: "Secure your future property with an initial deposit and spread subsequent payments over the development period.",
   },
   {
-    conv: "Choose from inventory currently available.",
-    pre: "Access a broader selection earlier — preferred floors, views and layouts.",
+    n: "03",
+    tag: "Selection",
+    title: "Priority Selection",
+    body: "Choose from the most desirable floors, views and layouts while a wider selection is still available.",
   },
   {
-    conv: "Buy after development milestones are already reflected in the asset.",
-    pre: "Position before the project reaches completion and later commercialization.",
+    n: "04",
+    tag: "Growth",
+    title: "Potential Appreciation",
+    body: "Your residence could increase in market value throughout construction, even before you complete the purchase.",
   },
 ];
 

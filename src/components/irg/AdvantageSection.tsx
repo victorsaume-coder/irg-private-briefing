@@ -1,29 +1,31 @@
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 import { CONSTRUCTION_IMAGE } from "./assets";
-import { COMPARISONS } from "./content";
+import { ADVANTAGES } from "./content";
 
 export function AdvantageSection() {
   return (
     <section id="advantage" className="bg-warm-white px-6 py-28 lg:px-12 lg:py-36">
       <div className="mx-auto max-w-[1400px]">
         <Reveal>
-          <p className="irg-eyebrow text-irg-navy/70">The Pre-Construction Advantage</p>
+          <p className="irg-eyebrow text-irg-navy/70">Understanding Pre-Construction</p>
         </Reveal>
 
         <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <Reveal className="lg:col-span-6">
-            <h2 className="font-display text-4xl font-light leading-[1.1] text-irg-navy-deep lg:text-[3.2rem]">
-              Miami pre-construction means securing a residence directly from a developer before the
-              building is completed.
+          <Reveal className="lg:col-span-7">
+            <h2 className="font-display text-4xl font-light leading-[1.08] text-irg-navy-deep lg:text-[3.4rem]">
+              The opportunity starts before completion.
             </h2>
-            <p className="mt-8 text-[17px] font-light leading-relaxed text-charcoal/70">
-              It is not simply another type of real estate purchase. Entering earlier in the
-              development cycle can create advantages in pricing, capital deployment, inventory
-              selection and timing that are different from buying an already completed property.
+            <p className="mt-8 max-w-xl text-[17px] font-light leading-relaxed text-charcoal/70">
+              Pre-construction allows you to purchase a residence directly from a developer before
+              the building is completed, sometimes even before construction begins.
+            </p>
+            <p className="mt-5 max-w-xl text-[17px] font-light leading-relaxed text-charcoal/70">
+              Buying at this early stage offers significant advantages that are typically
+              unavailable in conventional real estate purchases.
             </p>
           </Reveal>
 
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-5">
             <Reveal>
               <div className="overflow-hidden rounded-[3px] border border-hairline">
                 <img
@@ -40,38 +42,36 @@ export function AdvantageSection() {
           </div>
         </div>
 
-        <div className="mt-24">
-          <Reveal>
-            <div className="grid grid-cols-2 gap-6 border-b border-hairline pb-6 text-[12px] uppercase tracking-irg text-irg-gray">
-              <span>Conventional Real Estate</span>
-              <span className="text-irg-navy">Pre-Construction</span>
-            </div>
-          </Reveal>
-
-          <Stagger className="mt-2" gap={0.1}>
-            {COMPARISONS.map((c) => (
-              <StaggerItem key={c.conv}>
-                <div className="grid grid-cols-2 gap-6 border-b border-hairline py-7 lg:gap-12 lg:py-9">
-                  <p className="flex items-start gap-4 text-[17px] font-light leading-snug text-charcoal/55">
-                    <span className="mt-2 h-px w-6 shrink-0 bg-irg-gray/40" />
-                    {c.conv}
-                  </p>
-                  <p className="flex items-start gap-4 text-[17px] font-normal leading-snug text-irg-navy-deep">
-                    <span className="mt-2 h-px w-6 shrink-0 bg-irg-navy/60" />
-                    {c.pre}
-                  </p>
+        <Stagger className="mt-24 grid gap-px overflow-hidden border border-hairline bg-hairline sm:grid-cols-2 lg:grid-cols-4">
+          {ADVANTAGES.map((a) => (
+            <StaggerItem key={a.n}>
+              <div className="group flex h-full flex-col bg-warm-white p-8 transition-colors duration-500 hover:bg-sand/60 lg:p-10">
+                <div className="flex items-baseline justify-between">
+                  <span className="font-display text-[13px] font-normal tracking-irg text-irg-gray">
+                    {a.n}
+                  </span>
+                  <span className="text-[11px] uppercase tracking-irg text-irg-navy/50">
+                    {a.tag}
+                  </span>
                 </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
+                <div className="mt-8 h-px w-10 bg-irg-navy/40 transition-all duration-500 group-hover:w-16 group-hover:bg-irg-navy/70" />
+                <h3 className="mt-7 font-display text-2xl font-light leading-tight text-irg-navy-deep lg:text-[1.7rem]">
+                  {a.title}
+                </h3>
+                <p className="mt-4 text-[15px] font-light leading-relaxed text-charcoal/65">
+                  {a.body}
+                </p>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
 
-          <Reveal className="mt-12 max-w-3xl">
-            <p className="font-display text-2xl font-light leading-snug text-irg-navy-deep lg:text-[1.7rem]">
-              Earlier access. More flexible capital. Better selection. More time for value to
-              develop.
-            </p>
-          </Reveal>
-        </div>
+        <Reveal className="mt-10">
+          <p className="text-[12px] uppercase tracking-irg text-irg-gray">
+            Pricing, payment structures and availability vary by development. Appreciation is not
+            guaranteed.
+          </p>
+        </Reveal>
       </div>
     </section>
   );
