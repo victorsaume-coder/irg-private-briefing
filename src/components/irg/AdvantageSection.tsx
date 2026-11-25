@@ -21,8 +21,8 @@ export function AdvantageSection() {
                 the building is completed, sometimes even before construction begins.
               </p>
               <p>
-                Buying at this early stage offers significant advantages that are typically
-                unavailable in conventional real estate purchases.
+                Buying at this early stage can offer a combination of significant advantages rarely
+                available when purchasing an existing property.
               </p>
             </div>
           </Reveal>
@@ -64,6 +64,13 @@ export function AdvantageSection() {
             </StaggerItem>
           ))}
         </Stagger>
+
+        <Reveal className="mt-10">
+          <p className="text-[12px] font-light tracking-wide text-irg-gray">
+            Pricing, deposit schedules and availability vary by development. Market values may rise
+            or fall.
+          </p>
+        </Reveal>
       </div>
     </section>
   );

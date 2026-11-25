@@ -9,26 +9,26 @@ export const ADVANTAGES = [
   {
     n: "01",
     tag: "Pricing",
-    title: "Early Pricing",
-    body: "Secure initial developer pricing before potential price increases as the project progresses.",
+    title: "Early-Stage Pricing",
+    body: "Secure your purchase price during the early stages of a development, before potential price increases in subsequent sales phases.",
   },
   {
     n: "02",
     tag: "Capital",
-    title: "Progressive Payments",
-    body: "Secure your future property with an initial deposit and spread subsequent payments over the development period.",
+    title: "Staggered Payments",
+    body: "Commit your capital gradually through scheduled deposits throughout development, with the remaining balance due at closing.",
   },
   {
     n: "03",
     tag: "Selection",
-    title: "Priority Selection",
-    body: "Choose from the most desirable floors, views and layouts while a wider selection is still available.",
+    title: "Greater Selection",
+    body: "Choose from a wider inventory of residences, securing your preferred floors, views and layouts before availability becomes more limited.",
   },
   {
     n: "04",
     tag: "Growth",
     title: "Potential Appreciation",
-    body: "Your residence could increase in market value throughout construction, even before you complete the purchase.",
+    body: "Benefit from the potential increase in your residence's market value between the time you sign your purchase contract and the building's completion.",
   },
 ];
 
