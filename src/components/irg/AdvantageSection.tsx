@@ -65,13 +65,6 @@ export function AdvantageSection() {
             </StaggerItem>
           ))}
         </Stagger>
-
-        <Reveal className="mt-10">
-          <p className="text-[12px] uppercase tracking-irg text-irg-gray">
-            Pricing, payment structures and availability vary by development. Appreciation is not
-            guaranteed.
-          </p>
-        </Reveal>
       </div>
     </section>
   );
