@@ -1,3 +1,5 @@
+import { OBJECTIVE_IMAGES } from "./assets";
+
 export const NAV = [
   { label: "The Advantage", href: "#advantage" },
   { label: "Why Miami", href: "#why-miami" },
@@ -64,32 +66,62 @@ export const OBJECTIVES = [
   {
     n: "01",
     title: "Own & Enjoy",
-    body: "A second home, future residence or Miami base that combines lifestyle and long-term ownership.",
+    headline: "A place to call your own.",
+    body: "Secure your future Miami residence today and choose a property that reflects the way you and your family want to live.",
+    points: [
+      "Second home or future primary residence",
+      "Preferred views, layouts and amenities",
+      "Personal enjoyment and long-term ownership",
+    ],
+    image: OBJECTIVE_IMAGES[0],
   },
   {
     n: "02",
-    title: "Invest for Long-Term Growth",
-    body: "Position capital in carefully selected developments with a multi-year horizon.",
+    title: "Capital Appreciation",
+    headline: "Position yourself for future growth.",
+    body: "Enter carefully selected developments at an early stage, with the potential to benefit from appreciation during construction and beyond.",
+    points: [
+      "Strategic entry pricing",
+      "Potential appreciation before completion",
+      "Long-term capital growth",
+    ],
+    image: OBJECTIVE_IMAGES[1],
   },
   {
     n: "03",
-    title: "Create Potential Rental Income",
-    body: "Explore projects where ownership and rental structures may support an income-producing strategy.",
+    title: "Rental Income",
+    headline: "Own with income in mind.",
+    body: "Secure a future residence in a development selected for its rental potential once completed.",
+    points: [
+      "Short- or long-term rental potential",
+      "Rental-friendly developments",
+      "Income potential and ownership costs",
+    ],
+    image: OBJECTIVE_IMAGES[2],
   },
   {
     n: "04",
-    title: "Diversify",
-    body: "Add U.S. real estate exposure to a broader investment portfolio.",
+    title: "Wealth Diversification",
+    headline: "Build wealth beyond borders.",
+    body: "Diversify your portfolio through U.S. dollar-denominated real estate while deploying capital progressively during development.",
+    points: [
+      "Geographic diversification",
+      "Tangible U.S. dollar-denominated assets",
+      "Progressive capital deployment",
+    ],
+    image: OBJECTIVE_IMAGES[3],
   },
   {
     n: "05",
-    title: "Build in Dollars",
-    body: "Hold part of your wealth in a tangible U.S.-based asset.",
-  },
-  {
-    n: "06",
-    title: "Plan Ahead",
-    body: "For international families, U.S. real estate may form part of a broader residency, immigration or estate-planning conversation with the appropriate specialized advisors.",
+    title: "Future & Family",
+    headline: "Start building your family's next chapter.",
+    body: "Plan ahead by securing a future residence in Miami that aligns with your family's long-term aspirations.",
+    points: [
+      "Future family residence",
+      "Education and relocation planning",
+      "Long-term generational ownership",
+    ],
+    image: OBJECTIVE_IMAGES[4],
   },
 ];
 

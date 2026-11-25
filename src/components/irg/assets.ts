@@ -29,6 +29,15 @@ export const OPPORTUNITY_IMAGES = [
   "https://vibe.filesafe.space/1795082603459638104/assets/5060dc4d-2646-4473-942f-3bc435305f95.png",
 ];
 
+// Imagery for the interactive objectives discovery experience.
+export const OBJECTIVE_IMAGES = [
+  INTERIOR_IMAGE,
+  LANDMARK_IMAGE,
+  FACADE_IMAGE,
+  BRICKELL_IMAGE,
+  PEOPLE_IMAGE,
+];
+
 // Replace with the verified IRG WhatsApp number when ready.
 export const WHATSAPP_URL =
   "https://wa.me/13050000000?text=Hello%20Victor%20and%20Luis%20%E2%80%94%20I%20received%20the%20IRG%20Miami%20briefing%20and%20would%20like%20to%20talk.";
