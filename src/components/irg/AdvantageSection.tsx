@@ -10,34 +10,33 @@ export function AdvantageSection() {
           <p className="irg-eyebrow text-irg-navy/70">Understanding Pre-Construction</p>
         </Reveal>
 
-        <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <Reveal className="lg:col-span-7">
-            <h2 className="font-display text-4xl font-light leading-[1.08] text-irg-navy-deep lg:text-[3.4rem]">
+        <div className="mt-10 grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+          <Reveal className="lg:col-span-7 xl:col-span-8">
+            <h2 className="font-display text-4xl font-light leading-[1.08] text-irg-navy-deep lg:text-[3.2rem]">
               The opportunity starts before completion.
             </h2>
-            <p className="mt-8 max-w-xl text-[17px] font-light leading-relaxed text-charcoal/70">
-              Pre-construction allows you to purchase a residence directly from a developer before
-              the building is completed, sometimes even before construction begins.
-            </p>
-            <p className="mt-5 max-w-xl text-[17px] font-light leading-relaxed text-charcoal/70">
-              Buying at this early stage offers significant advantages that are typically
-              unavailable in conventional real estate purchases.
-            </p>
+            <div className="mt-7 max-w-xl space-y-4 text-[16px] font-light leading-relaxed text-charcoal/75 lg:text-[17px]">
+              <p>
+                Pre-construction allows you to purchase a residence directly from a developer before
+                the building is completed, sometimes even before construction begins.
+              </p>
+              <p>
+                Buying at this early stage offers significant advantages that are typically
+                unavailable in conventional real estate purchases.
+              </p>
+            </div>
           </Reveal>
 
-          <div className="lg:col-span-5">
-            <Reveal>
-              <div className="overflow-hidden rounded-[3px] border border-hairline">
+          <div className="lg:col-span-5 xl:col-span-4 flex justify-start lg:justify-end">
+            <Reveal className="w-full max-w-[380px]">
+              <div className="overflow-hidden rounded-[2px] border border-hairline shadow-sm">
                 <img
                   src={CONSTRUCTION_IMAGE}
                   alt="A new Miami residential tower under construction at dawn"
-                  className="aspect-[4/3] w-full object-cover"
+                  className="aspect-[16/11] w-full object-cover"
                   loading="lazy"
                 />
               </div>
-              <p className="mt-4 text-[12px] uppercase tracking-irg text-irg-gray">
-                Entering earlier in the development cycle
-              </p>
             </Reveal>
           </div>
         </div>
