@@ -34,34 +34,29 @@ export const ADVANTAGES = [
 
 export const MIAMI_REASONS = [
   {
-    n: "01",
-    title: "Business & Wealth Migration",
     stat: "+94%",
-    body: "Miami's millionaire population nearly doubled between 2014 and 2024. Global firms such as Citadel are choosing Miami as their headquarters.",
+    title: "Wealth Growth",
+    body: "Miami's millionaire population nearly doubled between 2014 and 2024. Global financial firms such as Citadel have made Miami their home.",
   },
   {
-    n: "02",
-    title: "International Demand",
     stat: "52%",
-    body: "International buyers accounted for 52% of reported sales across participating South Florida new-development and condo-conversion projects, with buyers from 73 countries.",
+    title: "International Demand",
+    body: "International buyers from 73 countries accounted for more than half of reported new-development and condo-conversion sales in surveyed South Florida projects.",
   },
   {
-    n: "03",
-    title: "Infrastructure Investment",
     stat: "$9B",
-    body: "Miami International Airport's modernization program reflects the scale of investment in the city's future connectivity.",
+    title: "Infrastructure Investment",
+    body: "A $9 billion modernization program at Miami International Airport is designed to strengthen the city's global connectivity.",
   },
   {
-    n: "04",
-    title: "Florida State Income Tax",
     stat: "0%",
-    body: "No personal state income tax, an attractive environment for entrepreneurs, professionals and individuals considering Florida residency.",
+    title: "Personal State Income Tax",
+    body: "Florida's tax environment is particularly attractive to entrepreneurs, professionals and wealthy individuals considering relocation.",
   },
   {
-    n: "05",
-    title: "Global Luxury Market",
     stat: "#2",
-    body: "Miami ranks as the world's second-largest branded residences market, attracting prestigious international hospitality and luxury brands.",
+    title: "Branded Residences",
+    body: "Miami is the world's second-largest branded residences market, attracting some of the most prestigious hospitality, automotive and lifestyle brands.",
   },
 ];
 
