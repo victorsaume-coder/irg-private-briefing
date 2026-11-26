@@ -4,7 +4,8 @@ export const NAV = [
   { label: "The Advantage", href: "#advantage" },
   { label: "Objectives", href: "#objectives" },
   { label: "Why Miami", href: "#why-miami" },
-  { label: "Opportunities", href: "#opportunities" },
+  { label: "The IRG Advantage", href: "#irg-advantage" },
+  { label: "Developments", href: "#developments" },
 ];
 
 export const ADVANTAGES = [
@@ -125,91 +126,46 @@ export const OBJECTIVES = [
   },
 ];
 
-export const ACCESS_TIERS = [
-  {
-    stage: "Private / Limited Access",
-    items: "List Zero · Friends & Family · Pre-Launch",
-    note: "Earliest pricing, preferred inventory and developer incentives — before broader release.",
-    dominant: true,
+export const IRG_ADVANTAGE = {
+  eyebrow: "The IRG Advantage",
+  headline: "The IRG Advantage.",
+  intro:
+    "With over 18 years of real estate experience, International Realty Group combines deep market knowledge, direct developer relationships and personalized representation to give our clients a distinct advantage in Miami's pre-construction market.",
+  years: { stat: "18+", label: "Years of Experience" },
+  privileged: {
+    label: "Privileged Access",
+    headline: "Access Before the Public Market.",
+    body: "Our long-standing relationships with leading developers such as Terra, PMG and Swire Properties open doors to selected private opportunities before they become available to the broader market.",
   },
-  {
-    stage: "Broker Release",
-    items: "Wider broker distribution",
-    note: "The project becomes visible to the broker community at published pricing.",
-    dominant: false,
+  earlyAccess: {
+    label: "Private Early Access",
+    headline: "List Zero & Friends and Family",
+    intro:
+      "Selected private releases where a limited circle of buyers can access opportunities such as:",
+    points: [
+      "Preferential early-stage pricing",
+      "Pre-launch inventory",
+      "Priority residence selection",
+      "Developer incentives",
+      "Special purchase conditions",
+    ],
+    note: "Access and conditions vary by development.",
   },
-  {
-    stage: "Public Market",
-    items: "Broad commercialization",
-    note: "Public marketing, advertising and full retail visibility — often after earlier inventory has shifted.",
-    dominant: false,
+  strategic: {
+    label: "Strategic Expertise",
+    body: "We combine our knowledge of developers, locations, entry pricing, payment structures and residence selection to identify attractive opportunities, assess potential risks and help you make informed decisions aligned with your objectives.",
   },
-];
+  personalized: {
+    label: "Personalized Representation",
+    body: "From identifying the right opportunity to closing, we represent your interests and guide you throughout the purchasing process, connecting you with the professional resources you need along the way.",
+  },
+};
 
-export const EARLY_ACCESS = [
-  "List Zero pricing",
-  "Friends & Family releases",
-  "Pre-launch inventory",
-  "Preferred unit selection",
-  "Developer incentives",
-];
-
-export const FRAMEWORK = [
-  { k: "Developer", v: "Track record, execution and reputation." },
-  { k: "Location", v: "Long-term demand, neighborhood evolution and connectivity." },
-  { k: "Entry Point", v: "Where the opportunity sits within the project's commercial cycle." },
-  { k: "Capital Structure", v: "Deposits, timing and overall financial flexibility." },
-  { k: "Inventory", v: "Views, floors, layouts, scarcity and relative positioning." },
-  {
-    k: "Ownership Strategy",
-    v: "Lifestyle, appreciation, rental, diversification or long-term portfolio role.",
-  },
-];
-
-export const DEVELOPERS = [
-  "Terra",
-  "PMG",
-  "Swire Properties",
-  "13th Floor Investments",
-  "Key International",
-  "One Thousand Group",
-  "DaGrosa Capital Development Partners",
-];
-
-export const OPPORTUNITIES = [
-  {
-    name: "Kempinski Residences",
-    place: "Miami Design District",
-    line: "Branded European hospitality meets the Design District's art-led identity.",
-  },
-  {
-    name: "The Residences at Mandarin Oriental",
-    place: "Brickell Key",
-    line: "Waterfront branded living anchored by a five-star hospitality operator.",
-  },
-  {
-    name: "Delano Residences & Hotel",
-    place: "Miami Beach",
-    line: "A reimagined landmark of Miami Beach's design heritage.",
-  },
-  {
-    name: "Jean-Georges Miami Tropic",
-    place: "Edgewater",
-    line: "Culinary-led branded residences on the Biscayne waterfront.",
-  },
-  {
-    name: "Villa Miami",
-    place: "Edgewater",
-    line: "Sculptural architecture on one of Edgewater's deepest waterfront parcels.",
-  },
-  {
-    name: "619 Brickell by Nobu",
-    place: "Brickell",
-    line: "A branded vertical community at the heart of Brickell's evolution.",
-  },
-  {
-    name: "One Twenty Brickell Residences",
-    place: "Brickell",
-    line: "A refined address within Brickell's next generation of residential towers.",
-  },
+export const DEVELOPMENTS = [
+  { name: "Kempinski Residences" },
+  { name: "The Residences at Mandarin Oriental" },
+  { name: "Villa Miami" },
+  { name: "Delano Residences" },
+  { name: "Miami Tropic" },
+  { name: "619 by NOBU" },
 ];

@@ -1,13 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { AdvantageSection } from "@/components/irg/AdvantageSection";
-import { ConversationSection } from "@/components/irg/ConversationSection";
+import { ClosingSection } from "@/components/irg/ClosingSection";
 import { Footer } from "@/components/irg/Footer";
 import { Header } from "@/components/irg/Header";
 import { Hero } from "@/components/irg/Hero";
 import { HERO_IMAGE } from "@/components/irg/assets";
+import { DevelopmentsSection } from "@/components/irg/DevelopmentsSection";
+import { IrgAdvantageSection } from "@/components/irg/IrgAdvantageSection";
 import { ObjectivesSection } from "@/components/irg/ObjectivesSection";
-import { OpportunitiesSection } from "@/components/irg/OpportunitiesSection";
 import { WhyMiamiSection } from "@/components/irg/WhyMiamiSection";
 
 export const Route = createFileRoute("/")({
@@ -43,8 +44,9 @@ function Index() {
         <AdvantageSection />
         <ObjectivesSection />
         <WhyMiamiSection />
-        <OpportunitiesSection />
-        <ConversationSection />
+        <IrgAdvantageSection />
+        <DevelopmentsSection />
+        <ClosingSection />
       </main>
       <Footer />
     </div>
