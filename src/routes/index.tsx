@@ -10,7 +10,6 @@ import { HERO_IMAGE } from "@/components/irg/assets";
 import { ObjectivesSection } from "@/components/irg/ObjectivesSection";
 import { OpportunitiesSection } from "@/components/irg/OpportunitiesSection";
 import { WhyMiamiSection } from "@/components/irg/WhyMiamiSection";
-import { BuyWellSection } from "@/components/irg/BuyWellSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,7 +44,6 @@ function Index() {
         <AdvantageSection />
         <ObjectivesSection />
         <WhyMiamiSection />
-        <BuyWellSection />
         <IrgSection />
         <OpportunitiesSection />
         <ConversationSection />
