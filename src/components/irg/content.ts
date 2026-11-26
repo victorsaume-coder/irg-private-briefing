@@ -4,6 +4,7 @@ export const NAV = [
   { label: "The Advantage", href: "#advantage" },
   { label: "Objectives", href: "#objectives" },
   { label: "Why Miami", href: "#why-miami" },
+  { label: "The IRG Advantage", href: "#irg-advantage" },
   { label: "Developments", href: "#developments" },
 ];
 
@@ -135,12 +136,12 @@ export const IRG_ADVANTAGE = {
     label: "Privileged Access",
     headline: "Access Before the Public Market.",
     body: "Our long-standing relationships with leading developers such as Terra, PMG and Swire Properties open doors to selected private opportunities before they become available to the broader market.",
+    developers: ["Terra", "PMG", "Swire Properties"],
   },
   earlyAccess: {
     label: "Private Early Access",
-    headline: "List Zero & Friends and Family",
-    intro:
-      "Selected private releases where a limited circle of buyers can access opportunities such as:",
+    headline: "List Zero & Friends & Family",
+    intro: "Private pre-launch releases where a limited circle of buyers may benefit from:",
     points: [
       "Preferential early-stage pricing",
       "Pre-launch inventory",
