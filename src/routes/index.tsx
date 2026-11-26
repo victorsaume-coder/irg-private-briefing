@@ -7,7 +7,6 @@ import { Header } from "@/components/irg/Header";
 import { Hero } from "@/components/irg/Hero";
 import { HERO_IMAGE } from "@/components/irg/assets";
 import { DevelopmentsSection } from "@/components/irg/DevelopmentsSection";
-import { IrgAdvantageSection } from "@/components/irg/IrgAdvantageSection";
 import { ObjectivesSection } from "@/components/irg/ObjectivesSection";
 import { WhyMiamiSection } from "@/components/irg/WhyMiamiSection";
 
@@ -44,7 +43,6 @@ function Index() {
         <AdvantageSection />
         <ObjectivesSection />
         <WhyMiamiSection />
-        <IrgAdvantageSection />
         <DevelopmentsSection />
         <ClosingSection />
       </main>

@@ -8,7 +8,7 @@ import { DEVELOPMENTS } from "./content";
 export function DevelopmentsSection() {
   const [active, setActive] = useState(0);
   const total = DEVELOPMENTS.length;
-  const project = DEVELOPMENTS[active]!;
+  const project: { name: string } = DEVELOPMENTS[active] ?? { name: "" };
 
   return (
     <section id="developments" className="bg-warm-white px-6 py-28 lg:px-12 lg:py-36">
