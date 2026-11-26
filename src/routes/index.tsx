@@ -45,8 +45,8 @@ function Index() {
       <main>
         <Hero />
         <AdvantageSection />
-        <WhyMiamiSection />
         <ObjectivesSection />
+        <WhyMiamiSection />
         <AccessSection />
         <BuyWellSection />
         <IrgSection />
