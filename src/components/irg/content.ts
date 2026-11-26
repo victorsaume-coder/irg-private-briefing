@@ -4,7 +4,7 @@ export const NAV = [
   { label: "The Advantage", href: "#advantage" },
   { label: "Objectives", href: "#objectives" },
   { label: "Why Miami", href: "#why-miami" },
-  { label: "IRG", href: "#irg" },
+  { label: "Opportunities", href: "#opportunities" },
 ];
 
 export const ADVANTAGES = [
