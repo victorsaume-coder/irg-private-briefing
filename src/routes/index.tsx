@@ -9,7 +9,6 @@ import { IrgSection } from "@/components/irg/IrgSection";
 import { HERO_IMAGE } from "@/components/irg/assets";
 import { ObjectivesSection } from "@/components/irg/ObjectivesSection";
 import { OpportunitiesSection } from "@/components/irg/OpportunitiesSection";
-import { PeopleSection } from "@/components/irg/PeopleSection";
 import { WhyMiamiSection } from "@/components/irg/WhyMiamiSection";
 import { BuyWellSection } from "@/components/irg/BuyWellSection";
 
@@ -49,7 +48,6 @@ function Index() {
         <BuyWellSection />
         <IrgSection />
         <OpportunitiesSection />
-        <PeopleSection />
         <ConversationSection />
       </main>
       <Footer />
