@@ -2,8 +2,8 @@ import { OBJECTIVE_IMAGES } from "./assets";
 
 export const NAV = [
   { label: "The Advantage", href: "#advantage" },
+  { label: "Objectives", href: "#objectives" },
   { label: "Why Miami", href: "#why-miami" },
-  { label: "Access", href: "#access" },
   { label: "IRG", href: "#irg" },
 ];
 

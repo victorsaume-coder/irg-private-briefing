@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { AdvantageSection } from "@/components/irg/AdvantageSection";
-import { AccessSection } from "@/components/irg/AccessSection";
 import { ConversationSection } from "@/components/irg/ConversationSection";
 import { Footer } from "@/components/irg/Footer";
 import { Header } from "@/components/irg/Header";
@@ -47,7 +46,6 @@ function Index() {
         <AdvantageSection />
         <ObjectivesSection />
         <WhyMiamiSection />
-        <AccessSection />
         <BuyWellSection />
         <IrgSection />
         <OpportunitiesSection />
